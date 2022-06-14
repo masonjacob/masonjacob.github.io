@@ -523,6 +523,9 @@ body {
   font-size: 14px;
   font-weight: 300;
 }
+.side-nav > li:hover::before {
+  color: #fff;
+}
 .side-nav li:nth-child(1)::before {
   content: "01";
 }
@@ -1424,16 +1427,16 @@ body {
   }
 }
 .outer-nav li.is-vis:nth-child(2) {
-  transition-delay: 0.4s;
+  transition-delay: 0.2s;
 }
 .outer-nav li.is-vis:nth-child(3) {
-  transition-delay: 0.8s;
+  transition-delay: 0.4s;
 }
 .outer-nav li.is-vis:nth-child(4) {
-  transition-delay: 1.2s;
+  transition-delay: 0.8s;
 }
 .outer-nav li.is-vis:nth-child(5) {
-  transition-delay: 1.6s;
+  transition-delay: 1.2s;
 }
 
 /*# sourceMappingURL=main.css.map */
