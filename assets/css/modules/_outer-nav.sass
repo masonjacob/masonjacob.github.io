@@ -34,14 +34,21 @@
   &--animate
 
     .container
+      transform:  translateZ(-1800px) translateY(50%) rotateX(45deg)
+      outline: 20px solid $highlight
+
+  /* old
+    .container
       transform: translateZ(-1800px) translateX(-50%) rotateY(45deg)
       outline: 30px solid $highlight
+      */
 
 .outer-nav
   position: absolute
-  top: 50%
-  left: 55%
-  transform: translateY(-50%)
+  width: 100%
+  top: 35%
+  left: 50%
+  transform: translateY(-75%) translateX(-50%) 
   transform-style: preserve-3d
   margin: 0
   padding: 0
@@ -67,32 +74,30 @@
       display: block
 
   & > li
+    display: inline-block
     transform-style: preserve-3d
-    transform: translateX(350px) translateZ(-1000px)
+    transform: translateY(50px) 
+    margin: 25px
     font-size: 55px
     font-weight: 900
     opacity: 0
     cursor: pointer
     transition: transform .2s, opacity .2s
 
+    &:hover
+        color: $highlight
+
     &.is-vis
       transform: translateX(0) translateZ(0)
       opacity: 1
-      transition: transform .4s, opacity .4s
+      transition: transform 1s, opacity .8s
 
-    &::before
-      content: ""
-      position: absolute
-      top: 50%
-      left: 50%
-      transform: translate(-50%, -25%)
-      width: 110%
-      height: 15px
-      opacity: 0
-      background-color: $highlight
-
-    &.is-active::before
-      opacity: 1
+    &.is-active
+      border: 10px solid $highlight
+      border-radius: 25px
+      padding-left: 40px
+      padding-right:40px
+      color: $highlight
 
     @media (max-width: 767px)
       font-size: 44px
@@ -101,13 +106,13 @@
       font-size: 34px
 
   li.is-vis:nth-child(2)
-    transition-delay: .04s
+    transition-delay: .4s
 
   li.is-vis:nth-child(3)
-    transition-delay: .08s
+    transition-delay: .8s
 
   li.is-vis:nth-child(4)
-    transition-delay: .12s
+    transition-delay: 1.2s
 
   li.is-vis:nth-child(5)
-    transition-delay: .16s
+    transition-delay: 1.6s
