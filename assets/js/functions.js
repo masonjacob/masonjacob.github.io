@@ -1,4 +1,4 @@
-// @codekit-prepend "/vendor/hammer-2.0.8.js";
+//@codekit-prepend "/vendor/hammer-2.0.8.js";
 
 $( document ).ready(function() {
 
@@ -56,9 +56,9 @@ $( document ).ready(function() {
     var curActive = $('.side-nav').find('.is-active'),
         curPos = $('.side-nav').children().index(curActive),
         lastItem = $('.side-nav').children().length - 1,
-        nextPos = lastItem;
-
-    updateNavs(lastItem);
+        nextPos = getIndexOfListItem('.side-nav', "About");
+  
+    updateNavs(nextPos);
     updateContent(curPos, nextPos, lastItem);
 
   });
@@ -276,5 +276,16 @@ $( document ).ready(function() {
   outerNav();
   workSlider();
   transitionLabels();
+
+  // Custom Functions Writted by Mason Jacob
+
+  // jQuery function to get the index of an item in a list
+  function getIndexOfListItem(listClass, listItem) {
+    $(listClass).children().children().each(function () {
+      if (this.innerHTML === listItem) {
+        nextPos = $(this).parent().index();
+      }});
+      return nextPos;
+  }
 
 });
