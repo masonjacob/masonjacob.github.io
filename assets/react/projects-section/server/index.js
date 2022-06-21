@@ -12,13 +12,23 @@ const db = mysql.createConnection({
     database: 'portfolio-website-database'
 });
 
+app.get('/get', (req, res) => {
+    db.query("SELECT * FROM portfolio-website-database", (err, result) => {
+        if (err) {
+            console.log(err);
+        } else {
+            res.send(result);
+        }
+    });
+});
+
 app.post('/post', (req, res) => {
     const id  = req.body.id;
     const name = req.body.name;
     const description = req.body.description;
     const image = req.body.image;
     db.query(
-        'INSERT INTO projects (id, name, description, image) VALUES (?,?)', 
+        'INSERT INTO projects (id, name, description, image) VALUES (?,?)',
         [id, name, description, image], 
         (err, result) => {
             if (err) {
