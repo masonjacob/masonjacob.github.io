@@ -31,7 +31,7 @@ const db = mysql.createConnection({
 });
 
 app.get('/get', (req, res) => {
-    db.query("SELECT * FROM portfolio-website-database", (err, result) => {
+    db.query("SELECT * FROM projects", (err, result) => {
         if (err) {
             res.send(err);
         } else {
