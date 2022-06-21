@@ -2,13 +2,13 @@ const express = require('express');
 const mysql = require('mysql');
 const cors = require('cors');
 
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 3001
 
 const app = express();
 
 app.use(cors());
-// app.use(express.json());
-app.use(function (req, res, next) {
+app.use(express.json());
+/*app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.setHeader(
       "Access-Control-Allow-Methods",
@@ -19,7 +19,7 @@ app.use(function (req, res, next) {
       "Origin, X-Requested-With, Content-Type, Accept"
     );
     next();
-  });
+  });*/
 
 const db = mysql.createConnection({
     user: 'root',
@@ -31,7 +31,7 @@ const db = mysql.createConnection({
 app.get('/get', (req, res) => {
     db.query("SELECT * FROM portfolio-website-database", (err, result) => {
         if (err) {
-            console.log(err);
+            res.send(err);
         } else {
             res.send(result);
         }
