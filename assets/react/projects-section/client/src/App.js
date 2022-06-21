@@ -20,12 +20,13 @@ function App() {
 }*/
 
 const getProjects = () => {
-  console.log("Querying Server");
   Axios.get("http://ec2-3-89-109-4.compute-1.amazonaws.com/get").then((response) => {
-    console.log("success");
     console.log(response);
+   /* Axios.get("http://localhost:3001/get").then((response) => {
+      console.log(response); */
   })
-}
+  }
+
 
 
   return (
