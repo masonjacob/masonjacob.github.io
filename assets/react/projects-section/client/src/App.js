@@ -20,7 +20,9 @@ function App() {
 }*/
 
 const getProjects = () => {
+  console.log("Querying Server");
   Axios.get("http://ec2-3-89-109-4.compute-1.amazonaws.com/get").then((response) => {
+    console.log("success");
     console.log(response);
   })
 }
@@ -29,7 +31,7 @@ const getProjects = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <button onClick={getProjectList}>Get Projects</button>
+        <button onClick={getProjects}>Get Projects</button>
       </header>
     </div>
   );
