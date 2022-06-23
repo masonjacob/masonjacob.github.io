@@ -56,7 +56,44 @@ $( document ).ready(function() {
     var curActive = $('.side-nav').find('.is-active'),
         curPos = $('.side-nav').children().index(curActive),
         lastItem = $('.side-nav').children().length - 1,
-        nextPos = getIndexOfListItem('.side-nav', "About");
+        nextPos = getIndexOfListItem('.side-nav', "About Me");
+  
+    updateNavs(nextPos);
+    updateContent(curPos, nextPos, lastItem);
+
+  });
+
+  
+  $('.intro-experience').click(function(){
+
+    var curActive = $('.side-nav').find('.is-active'),
+        curPos = $('.side-nav').children().index(curActive),
+        lastItem = $('.side-nav').children().length - 1,
+        nextPos = getIndexOfListItem('.side-nav', "Experience");
+  
+    updateNavs(nextPos);
+    updateContent(curPos, nextPos, lastItem);
+
+  });
+
+  $('.intro-projects').click(function(){
+
+    var curActive = $('.side-nav').find('.is-active'),
+        curPos = $('.side-nav').children().index(curActive),
+        lastItem = $('.side-nav').children().length - 1,
+        nextPos = getIndexOfListItem('.side-nav', "Projects");
+  
+    updateNavs(nextPos);
+    updateContent(curPos, nextPos, lastItem);
+
+  });
+
+  $('.intro-skills').click(function(){
+
+    var curActive = $('.side-nav').find('.is-active'),
+        curPos = $('.side-nav').children().index(curActive),
+        lastItem = $('.side-nav').children().length - 1,
+        nextPos = getIndexOfListItem('.side-nav', "About Me");
   
     updateNavs(nextPos);
     updateContent(curPos, nextPos, lastItem);
@@ -255,7 +292,7 @@ $( document ).ready(function() {
 
   function transitionLabels() {
 
-    $('.work-request--information input').focusout(function(){
+    $('.projects-request--information input').focusout(function(){
 
       var textVal = $(this).val();
 
