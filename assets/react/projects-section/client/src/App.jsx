@@ -65,7 +65,7 @@ function App() {
   return (
     <div className="App">
       <div className="Header">
-    
+    <h1 className="Header-Title">Projects</h1>
       </div>
 
       <div className="Projects">

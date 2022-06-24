@@ -4,6 +4,7 @@
 @import "./base/vars";
 @import "./base/selection-colors";
 @import "./base/body-element";
+@import "./modules/tag-filter.scss";
 
 $theme-colors: (
     "primary": #c0d900,
@@ -64,4 +65,13 @@ $border-width: 5px;
     margin: 0 0 0 0;
 }
     
+.Header {
+    
+    padding: 20px;
+    margin: auto;
+}
 
+.Header-Title {
+    text-align: center;
+    font-weight: 900;
+}
