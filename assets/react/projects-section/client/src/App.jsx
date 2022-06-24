@@ -1,13 +1,14 @@
 import Axios from 'axios';
 import React, { useState, useEffect} from 'react';
-import {Card} from 'react-bootstrap'
-import {Button} from 'react-bootstrap'
+import {Card} from 'react-bootstrap';
+import {Button} from 'react-bootstrap';
+import styles from "./assets/css/react.css";
 
 
 
 
 function App() {
-
+  console.log(styles.BootstrapCard);
   const [projectList, setProjectList] = useState([]);
 
   /*const addProject = () => {
@@ -46,8 +47,8 @@ function App() {
 
   const renderProjectCard = (project, index) => {
     return (
-        <Card className="Bootstrap-Card" style={{ width: '18rem' }} key = {index}>
-          <Card.Header className= "Card-Header">{project.image}</Card.Header>
+        <Card key = {index}>
+          <Card.Header className= "Card-Header"></Card.Header>
           <Card.Body>
             <Card.Title>{project.name}</Card.Title>
             <Card.Text>

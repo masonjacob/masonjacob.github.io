@@ -1,0 +1,57 @@
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "./base/fonts";
+@import "./base/normalize";
+@import "./base/vars";
+@import "./base/selection-colors";
+@import "./base/body-element";
+
+$theme-colors: (
+    "primary": #c0d900,
+    "danger": #ff4136
+);
+
+.card{
+    background: Transparent;
+    width: 40rem;
+    border-width: 5px;
+    border-color: rgb(55, 5, 5);
+    margin: 10px;
+}
+
+.card-body {
+    padding: 0px;
+}
+.card-header {
+    //background-color: $highlight;
+}
+
+.card-title {
+    padding: 10px;
+    color: $white;
+    font-weight: 900;
+    text-align: center;
+}
+
+.card-text {
+    color: $muted-gray;
+}
+
+
+.App {
+    background-color: $black;
+    min-height: 100vh;
+    height: 100%;
+
+}
+.Projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+}
+
+.Project {
+    transition: margin 1s;
+    margin: 0 0 0 0;
+}
+    
+
