@@ -1,5 +1,5 @@
 import Axios from 'axios';
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
 import {Card} from 'react-bootstrap'
 import {Button} from 'react-bootstrap'
 
@@ -12,10 +12,10 @@ function App() {
 
   /*const addProject = () => {
     Axios.post("http://ec2-3-89-109-4.compute-1.amazonaws.com/post", {
-      id: id,
       name: name,
       description: description,
-      image: image
+      image: image,
+      tags:tags
     }).then(()=> {
       console.log("success");
     })
@@ -26,6 +26,11 @@ function App() {
       setProjectList(response.data);
     });
   }
+
+
+  useEffect(() => {
+    getProjects();
+  }, []);
 
   const createProjectsObject = () => {
     const projectIDList = projectList.map((val, key) => {
@@ -39,13 +44,23 @@ function App() {
     return projectsObject;
   }
 
-  getProjects();
-  let projectsObject = createProjectsObject();
-  const [projectTransitionStates, setProjectTransitionStates] = useState(projectsObject);
+  const renderProjectCard = (project, index) => {
+    return (
+        <Card className="Bootstrap-Card" style={{ width: '18rem' }} key = {index}>
+          <Card.Header className= "Card-Header">{project.image}</Card.Header>
+          <Card.Body>
+            <Card.Title>{project.name}</Card.Title>
+            <Card.Text>
+              {project.text}
+            </Card.Text>
+          </Card.Body>
+        </Card>
+    )
+  }
 
-
-
-
+//let projectsObject = createProjectsObject();
+// console.log(projectsObject);
+//const [projectTransitionStates, setProjectTransitionStates] = useState(projectsObject);
 
   return (
     <div className="App">
@@ -53,23 +68,7 @@ function App() {
     
       </div>
       <div className="Projects">
-        {projectList.map((val, key) => {
-
-          return (
-            <div className="Project">
-              <Card border="primary" style={{ width: '18rem' }}>
-                <Card.Header>{val.name}</Card.Header>
-                <Card.Body>
-                  <Card.Title>{val.name}</Card.Title>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk
-                    of the card's content.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </div>
-          )
-        })}
+      {projectList.map((val,key) => { return(renderProjectCard(val)); })}
       </div>
     </div>
   );

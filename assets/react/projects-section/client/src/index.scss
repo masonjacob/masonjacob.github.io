@@ -1,0 +1,42 @@
+//From -vars.sass (need to copy and paste as of right now
+
+$white: #fff;
+$black: #0c0c0c;
+$highlight: #6f199d;
+$highlight-old: #0f33ff;
+$muted-gray: #707070;
+$muted-gray-old: #282828;
+
+
+$theme-colors: (
+    "primary": #c0d900,
+    "danger": #ff4136
+);
+
+.Card-Header {
+    color: $highlight;
+}
+
+.Bootstrap-Card {
+    border-width: 10px;
+    border-color: red;
+}
+
+.App {
+    background-color: #0c0c0c;
+    min-height: 100vh;
+    height: 100%;
+
+}
+.Projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+}
+
+.Project {
+    transition: margin 1s;
+    margin: 0 0 0 0;
+}
+    
+@import "../node_modules/bootstrap/scss/bootstrap";
