@@ -10,18 +10,23 @@ $theme-colors: (
     "danger": #ff4136
 );
 
+$card-width: 400px;
+$border-width: 5px;
+
 .card{
     background: Transparent;
-    width: 40rem;
-    border-width: 5px;
+    width: $card-width;
+    border-width: $border-width;
     border-color: rgb(55, 5, 5);
     margin: 10px;
 }
 
 .card-body {
     padding: 0px;
+    border: 2px solid $white;
 }
 .card-header {
+    padding: 0px;
     //background-color: $highlight;
 }
 
@@ -30,22 +35,27 @@ $theme-colors: (
     color: $white;
     font-weight: 900;
     text-align: center;
+    
 }
 
 .card-text {
     color: $muted-gray;
 }
 
+.card-image {
+    border-radius: 4px;
+    width: $card-width - ($border-width * 2);
+}
 
 .App {
     background-color: $black;
     min-height: 100vh;
     height: 100%;
-
 }
+
 .Projects {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     place-items: center;
 }
 

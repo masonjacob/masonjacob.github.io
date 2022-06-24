@@ -10384,13 +10384,18 @@ body {
 
 .card {
   background: Transparent;
-  width: 40rem;
+  width: 400px;
   border-width: 5px;
   border-color: rgb(55, 5, 5);
   margin: 10px;
 }
 
 .card-body {
+  padding: 0px;
+  border: 2px solid #fff;
+}
+
+.card-header {
   padding: 0px;
 }
 
@@ -10405,6 +10410,11 @@ body {
   color: #707070;
 }
 
+.card-image {
+  border-radius: 4px;
+  width: 390px;
+}
+
 .App {
   background-color: #0c0c0c;
   min-height: 100vh;
@@ -10413,7 +10423,7 @@ body {
 
 .Projects {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   place-items: center;
 }
 

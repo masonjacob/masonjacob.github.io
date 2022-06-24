@@ -8,7 +8,6 @@ import styles from "./assets/css/react.css";
 
 
 function App() {
-  console.log(styles.BootstrapCard);
   const [projectList, setProjectList] = useState([]);
 
   /*const addProject = () => {
@@ -48,7 +47,7 @@ function App() {
   const renderProjectCard = (project, index) => {
     return (
         <Card key = {index}>
-          <Card.Header className= "Card-Header"></Card.Header>
+          <Card.Header><img className="card-image" src={require(`./assets/img/${project.src}/image.jpg`)} alt=""/></Card.Header>
           <Card.Body>
             <Card.Title>{project.name}</Card.Title>
             <Card.Text>
@@ -68,8 +67,15 @@ function App() {
       <div className="Header">
     
       </div>
+
       <div className="Projects">
-      {projectList.map((val,key) => { return(renderProjectCard(val)); })}
+      {projectList.map((val,key) => { 
+        return(
+        <div key = {key}>
+          {renderProjectCard(val)}
+        </div>
+        )}
+      )}
       </div>
     </div>
   );
