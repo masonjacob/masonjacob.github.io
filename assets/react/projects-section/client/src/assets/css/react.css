@@ -10429,7 +10429,7 @@ body {
   background: Transparent;
   width: 400px;
   border-width: 5px;
-  border-color: rgb(55, 5, 5);
+  border-color: rgb(16, 236, 64);
   margin: 10px;
 }
 
@@ -10442,7 +10442,7 @@ body {
   padding: 0px;
 }
 
-.card-title {
+.customizedTitle {
   padding: 10px;
   color: #fff;
   font-weight: 900;
@@ -10483,6 +10483,38 @@ body {
 .Header-Title {
   text-align: center;
   font-weight: 900;
+}
+
+.loadingDiv {
+  padding-top: 50px;
+  margin: auto;
+}
+
+.loading {
+  margin: auto;
+  padding: 10px;
+}
+
+.loadingHeading {
+  font-weight: 900;
+  color: #6f199d;
+  text-align: center;
+  font-size: 50px;
+}
+
+.loadingText {
+  font-weight: 900;
+  text-align: center;
+  font-size: 20px;
+  color: #707070;
+}
+
+.loadingText em {
+  font-style: normal;
+  font-weight: 900;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
 }
 
 /*# sourceMappingURL=react.css.map */
