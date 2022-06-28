@@ -1,16 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector} from 'react-redux';
 import { selectProjectList } from './loadingSlice';
-import {Card} from 'react-bootstrap';
-import {Button} from 'react-bootstrap';
 import TagFilter from './TagFilter';
+import CustomCard from './CustomCard';
+import CustomModal from './CustomModal.jsx';
 
 
 
-
-function App() {
+const App = () => {
   const projectList = useSelector(selectProjectList);
-  console.log(projectList);
 
   const createProjectsObject = () => {
     const projectIDList = projectList.map((val, key) => {
@@ -24,19 +22,6 @@ function App() {
     return projectsObject;
   }
 
-  const renderProjectCard = (project, index) => {
-    return (
-        <Card key = {index}>
-          <Card.Header><img className="card-image" src={require(`../assets/img/${project.src}/image.jpg`)} alt=""/></Card.Header>
-          <Card.Body>
-            <Card.Title className="customizedTitle">{project.name}</Card.Title>
-            <Card.Text>
-              {project.text}
-            </Card.Text>
-          </Card.Body>
-        </Card>
-    )
-  }
 
 //let projectsObject = createProjectsObject();
 // console.log(projectsObject);
@@ -51,8 +36,8 @@ function App() {
       <div className="Projects">
       {projectList.map((val,key) => { 
         return(
-        <div key = {key}>
-          {renderProjectCard(val)}
+        <div key = {key} onClick={() => (<CustomModal val = {val}/>)}>
+          <CustomCard val = {val}/>
         </div>
         )}
       )}
