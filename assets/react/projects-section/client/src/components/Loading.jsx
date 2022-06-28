@@ -1,18 +1,14 @@
 import Axios from 'axios';
 import ReactLoading from 'react-loading';
 import React, { useState, useEffect} from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { setProjectList, selectProjectList } from './loadingSlice';
+import { useDispatch } from 'react-redux';
+import { setProjectList } from './loadingSlice';
 import App from './App';
 
 
 const Loading = ({ type, color }) => {
     const [done,setDone]=useState(undefined);
-    const projectList = useSelector(selectProjectList());
-    console.log(projectList);
     const dispatch = useDispatch();
-
-      //const [projectList, setProjectList] = useState([]);
 
   /*const addProject = () => {
     Axios.post("http://ec2-3-89-109-4.compute-1.amazonaws.com/post", {
@@ -32,11 +28,11 @@ const Loading = ({ type, color }) => {
     });
   }
 
-    useEffect(() => {
-        setTimeout(() => {
-            getProjects();
-        }, 2000);
-      }, []);
+  useEffect(() => {
+      setTimeout(() => {
+          getProjects();
+      }, 2000);
+  }, []);
     
     return (
         <>

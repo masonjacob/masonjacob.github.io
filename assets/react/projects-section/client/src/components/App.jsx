@@ -1,6 +1,6 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector} from 'react-redux';
-import { setProjectList, selectProjectList } from './loadingSlice';
+import { selectProjectList } from './loadingSlice';
 import {Card} from 'react-bootstrap';
 import {Button} from 'react-bootstrap';
 import TagFilter from './TagFilter';
