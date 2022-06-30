@@ -10517,4 +10517,31 @@ body {
   color: #fff;
 }
 
+.Placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.PlaceholderHeading {
+  font-weight: 900;
+  color: #6f199d;
+  text-align: center;
+  font-size: 80px;
+}
+
+.PlaceholderText {
+  font-weight: 900;
+  text-align: center;
+  font-size: 25px;
+  color: #707070;
+}
+
+.PlaceholderText em {
+  font-style: normal;
+  color: #fff;
+}
+
 /*# sourceMappingURL=react.css.map */
