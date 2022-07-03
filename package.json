@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile_sass": "sass ./assets/css/main.sass ./assets/css/main.css",
-    "watch_sass": "sass --watch ./assets/css/main.sass ./assets/css/main.css"
+    "compile-sass": "sass ./assets/css/main.sass ./assets/css/main.css",
+    "watch-sass": "sass --watch ./assets/css/main.sass ./assets/css/main.css"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.27.2"
+    "axios": "^0.27.2",
+    "bootstrap": "^5.1.3"
   }
 }

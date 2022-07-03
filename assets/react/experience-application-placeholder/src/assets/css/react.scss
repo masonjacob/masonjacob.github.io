@@ -1,0 +1,138 @@
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "./base/fonts";
+@import "./base/normalize";
+@import "./base/vars";
+@import "./base/selection-colors";
+@import "./base/body-element";
+@import "./modules/tag-filter.scss";
+
+$theme-colors: (
+    "primary": #c0d900,
+    "danger": #ff4136
+);
+
+$card-width: 400px;
+$border-width: 5px;
+
+.card{
+    background: Transparent;
+    width: $card-width;
+    border-width: $border-width;
+    border-color: rgb(16, 236, 64);
+    margin: 10px;
+}
+
+.card-body {
+    padding: 0px;
+    border: 2px solid $white;
+}
+.card-header {
+    padding: 0px;
+    //background-color: $highlight;
+}
+
+.customizedTitle{
+    padding: 10px;
+    color: $white;
+    font-weight: 900;
+    text-align: center;
+    
+}
+
+.card-text {
+    color: $muted-gray;
+}
+
+.card-image {
+    border-radius: 4px;
+    width: $card-width - ($border-width * 2);
+}
+
+.App {
+    background-color: $black;
+    min-height: 100vh;
+    height: 100%;
+}
+
+.Projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+}
+
+.Project {
+    transition: margin 1s;
+    margin: 0 0 0 0;
+}
+    
+.Header { 
+    padding: 20px;
+    margin: auto;
+}
+
+.Header-Title {
+    text-align: center;
+    font-weight: 900;
+}
+
+.loadingDiv {
+    padding-top: 50px;
+    margin: auto;
+}
+
+.loading {
+    margin: auto;
+    padding: 10px;
+
+}
+
+.loadingHeading {
+    font-weight: 900;
+    color: $highlight;
+    text-align: center;
+    font-size: 50px;
+
+}
+
+.loadingText {
+    font-weight: 900;
+    text-align: center;
+    font-size: 20px;
+    color: $muted-gray;
+}
+
+.loadingText em {
+    font-style: normal;
+    font-weight: 900;
+    text-align: center;
+    font-size: 20px;
+    color: $white
+}
+
+.Placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.PlaceholderHeading {
+    font-weight: 900;
+    color: $highlight;
+    text-align: center;
+    font-size: 80px;
+
+}
+
+.PlaceholderText {
+    font-weight: 900;
+    text-align: center;
+    font-size: 25px;
+    color: $muted-gray;
+}
+
+.PlaceholderText em {
+    font-style: normal;
+    color: $white
+}
