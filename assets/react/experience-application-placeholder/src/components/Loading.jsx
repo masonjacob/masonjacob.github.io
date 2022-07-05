@@ -23,7 +23,7 @@ const Loading = ({ type, color }) => {
                 <div className="loadingDiv">
                     <ReactLoading className="loading" type={type} color={color} height={'20%'} width={'20%'} />
                 </div><div>
-                    <h1 className="loadingHeading">Project Display V0.0 Loading...</h1>
+                    <h1 className="loadingHeading">Experience Display V0.0 Loading...</h1>
                     <p className="loadingText">Full Stack React Application proudly developed by <em>Mason Jacob.</em></p>
                 </div>
             </>
