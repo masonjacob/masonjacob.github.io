@@ -137,7 +137,6 @@ figure {
 }
 
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -209,8 +208,6 @@ input[type=number]::-webkit-outer-spin-button {
 
 input[type=search] {
   -webkit-appearance: textfield;
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
 
@@ -248,12 +245,20 @@ th {
   padding: 0;
 }
 
+::-moz-selection {
+  background: #FFF498;
+}
+
 ::selection {
   background: #FFF498;
 }
 
 ::-moz-selection {
   background: #FFF498;
+}
+
+img::-moz-selection {
+  background: transparent;
 }
 
 img::selection {
@@ -1343,7 +1348,8 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 .effect-rotate-left {
@@ -1439,6 +1445,4 @@ body {
 }
 .outer-nav li.is-vis:nth-child(5) {
   transition-delay: 1.2s;
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
