@@ -4,7 +4,7 @@ import React, { useState, useEffect} from 'react';
 import { useDispatch } from 'react-redux';
 import { setProjectList } from './loadingSlice';
 import App from './App';
-import Placeholder from './Placeholder';
+
 
 
 const Loading = ({ type, color }) => {
@@ -46,7 +46,7 @@ const Loading = ({ type, color }) => {
                     <p className="loadingText">Full Stack React Application proudly developed by <em>Mason Jacob.</em></p>
                 </div>
             </>
-        ) : (<Placeholder/>)}
+        ) : (<App/>)}
         </>
     )
 };
