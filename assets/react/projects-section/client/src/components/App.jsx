@@ -4,6 +4,7 @@ import { selectProjectList } from './loadingSlice';
 import TagFilter from './TagFilter';
 import CustomCard from './CustomCard';
 import CustomModal from './CustomModal.jsx';
+import {motion} from "framer-motion";
 
 
 
@@ -28,7 +29,7 @@ const App = () => {
 //const [projectTransitionStates, setProjectTransitionStates] = useState(projectsObject);
 
   return (
-    <div className="App">
+    <motion.div className="App" initial={{y: 50, opacity: 0}} animate = {{y: 0, opacity: 1}} transition={{ type: "tween", duration: 1 }}>
       <div className="Header">
     <h1 className="Header-Title">Projects</h1>
       </div>
@@ -36,13 +37,13 @@ const App = () => {
       <div className="Projects">
       {projectList.map((val,key) => { 
         return(
-        <div key = {key} onClick={() => (<CustomModal val = {val}/>)}>
+        <motion.div key = {key} /*onClick={() => (<CustomModal val = {val}/>)}*/>
           <CustomCard val = {val}/>
-        </div>
+        </motion.div>
         )}
       )}
       </div>
-    </div>
+    </motion.div>
   );
 }
 

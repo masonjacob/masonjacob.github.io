@@ -1,7 +1,9 @@
 .container {
     display: flex;
-    overflow: scroll;
-    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    //overflow: scroll;
+    width: auto;
     max-width: 100%;
     padding-left: 14px;
     border: 1px grey solid;
@@ -10,7 +12,7 @@
   }
   
   .container input {
-    width: 100%;
+    width: auto;
     min-width: 50%;
     border: none;
     border-radius: 5px;
