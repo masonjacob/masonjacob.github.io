@@ -10429,10 +10429,12 @@ body {
 .card {
   width: auto;
   background: Transparent;
-  width: 30vw;
-  border-width: 0.4vw;
   border-color: rgb(16, 236, 64);
   margin: 10px;
+}
+
+.card-image {
+  border-radius: 4px;
 }
 
 .card-body {
@@ -10447,18 +10449,12 @@ body {
 .customizedTitle {
   padding: 10px;
   color: #fff;
-  font-size: 1.5vw;
   font-weight: 900;
   text-align: center;
 }
 
 .card-text {
   color: #707070;
-}
-
-.card-image {
-  border-radius: 4px;
-  width: 29.2vw;
 }
 
 .App {
@@ -10469,7 +10465,6 @@ body {
 
 .Projects {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   place-items: center;
 }
 
@@ -10545,6 +10540,55 @@ body {
 .PlaceholderText em {
   font-style: normal;
   color: #fff;
+}
+
+/* For Mobile */
+@media screen and (max-width: 540px) {
+  .Projects {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    width: 90vw;
+    border-width: 1.2vw;
+  }
+  .card-image {
+    width: 87.6vw;
+  }
+  .customizedTitle {
+    font-size: 4.5vw;
+  }
+}
+/* For Tablets */
+@media screen and (min-width: 540px) and (max-width: 780px) {
+  .Projects {
+    grid-template-columns: 1fr 1fr;
+  }
+  .card {
+    width: 45vw;
+    border-width: 0.8vw;
+  }
+  .card-image {
+    width: 43.4vw;
+  }
+  .customizedTitle {
+    font-size: 2.5vw;
+  }
+}
+/* Everything else */
+@media screen and (min-width: 780px) {
+  .Projects {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .card {
+    width: 30vw;
+    border-width: 0.4vw;
+  }
+  .card-image {
+    width: 29.2vw;
+  }
+  .customizedTitle {
+    font-size: 1.5vw;
+  }
 }
 
 /*# sourceMappingURL=react.css.map */

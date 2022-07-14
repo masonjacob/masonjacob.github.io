@@ -11,16 +11,15 @@ $theme-colors: (
     "danger": #ff4136
 );
 
-$card-width: 30vw;
-$border-width: 0.4vw;
-
 .card{
     width: auto;
     background: Transparent;
-    width: $card-width;
-    border-width: $border-width;
     border-color: rgb(16, 236, 64);
     margin: 10px;
+}
+
+.card-image {
+    border-radius: 4px;
 }
 
 .card-body {
@@ -35,7 +34,6 @@ $border-width: 0.4vw;
 .customizedTitle{
     padding: 10px;
     color: $white;
-    font-size: 1.5vw;
     font-weight: 900;
     text-align: center;
     
@@ -43,11 +41,6 @@ $border-width: 0.4vw;
 
 .card-text {
     color: $muted-gray;
-}
-
-.card-image {
-    border-radius: 4px;
-    width: $card-width - ($border-width * 2);
 }
 
 .App {
@@ -58,7 +51,6 @@ $border-width: 0.4vw;
 
 .Projects {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
     place-items: center;
 }
 
@@ -138,3 +130,75 @@ $border-width: 0.4vw;
     font-style: normal;
     color: $white
 }
+
+/* For Mobile */
+@media screen and (max-width: 540px) {
+    $card-width: 90vw;
+    $border-width: 1.2vw;
+    $font-size: 4.5vw;
+    .Projects {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        width: $card-width;
+        border-width: $border-width;
+    }
+
+    .card-image {
+        width: $card-width - ($border-width * 2);
+    }
+
+    .customizedTitle {
+        font-size: $font-size;
+    }
+}
+
+/* For Tablets */
+@media screen and (min-width: 540px) and (max-width: 780px) {
+    $card-width: 45vw;
+    $border-width: 0.8vw;
+    $font-size: 2.5vw;
+
+    .Projects {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .card {
+        width: $card-width;
+        border-width: $border-width;
+    }
+
+    .card-image {
+        width: $card-width - ($border-width * 2);
+    }
+
+    .customizedTitle {
+        font-size: $font-size;
+    }
+}
+
+/* Everything else */
+@media screen and (min-width:780px) {
+    $card-width: 30vw;
+    $border-width: 0.4vw;
+    $font-size: 1.5vw;
+
+    .Projects {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .card {
+        width: $card-width;
+        border-width: $border-width;
+    }
+
+    .card-image {
+        width: $card-width - ($border-width * 2);
+    }
+
+    .customizedTitle {
+        font-size: $font-size;
+    }
+}
+
